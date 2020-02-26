@@ -2,7 +2,6 @@ import React from 'react'
 import { ThemeProvider, Grid } from 'theme-ui'
 import { Heading, Box, Text } from 'rebass'
 import theme from './theme/base'
-import Tile from './components/Box'
 import SideNav from './components/SideNav'
 import Footer from './components/Footer'
 
@@ -13,30 +12,104 @@ export default props =>
     sx={{
       px: 4,
       py: 6,
-      backgroundImage: 'url(/assets/tshirt3.jpg)',
+      backgroundImage: 'url(/assets/tshirt.jpg)',
       backgroundSize: 'cover',
-      color: 'white',
-      bg: 'gray',
+      color: '#000F02',
+      bg: '#FBFFF7',
       height: '100vh'
-    }}></Box>
-  <Box
+    }}><Heading fontSize={[ 5, 6, 7 ]} alignSelf={'center'}> PUNCH goes heer </Heading></Box>
+  <Grid
+    gap={0}
+    columns={[2, '1fr 1fr']}
     sx={{
-      display: 'grid',
-      gridGap: 0,
-      gridTemplateColumns: 'repeat(auto-fit, minmax(1fr, 3fr))',
+      overflow: 'hidden'
     }}>
     <Box p={3}
-      sx={{
-      minHeight: ['100vh', '100vh', 'calc(2/3*100vh)'], 
-      gridRow:'3', gridColumn:'1/3'}}>
-      <Heading fontSize={[ 4, 5, 6 ]}> About </Heading>
+      display={'flex'}
+      minHeight={['100vh', '100vh', 'calc(2/3*100vh)']}
+      width={[ '100vw', null, '30vw' ]}>
+      <Heading fontSize={[ 4, 5, 6 ]} alignSelf={'center'}> About </Heading>
     </Box>
     <Box p={3}
-      sx={{
-      minHeight: ['100vh', '100vh', 'calc(2/3*100vh)'], 
-      gridRow:'3', gridColumn:'2/3'}}>
-      <Text fontSize={[ 1, 2, 3 ]}> trarara </Text>
+      minHeight={['100vh', '100vh', 'calc(2/3*100vh)']}
+      width={[ '100vw', null, '30vw' ]}>
+      <Text fontSize={[ 2, 3, 4 ]}> trarara </Text>
     </Box>
+  </Grid>
+  <Box
+    width={'100vw'}
+    sx={{
+      px: 4,
+      py: 6,
+      backgroundImage: 'url(/assets/tshirt.jpg)',
+      backgroundSize: 'cover',
+      color: '#000F02',
+      bg: '#FBFFF7',
+      height: '100vh'
+    }}><Heading fontSize={[ 5, 6, 7 ]} alignSelf={'center'}> Progress GIF here </Heading></Box>
+  <Grid
+    gap={0}
+    columns={[2, '2fr 1fr']}
+    sx={{
+      overflow: 'hidden'
+    }}>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+      sx={{ 
+        backgroundImage: 'url(/assets/set.png)',      
+        backgroundSize: '100% auto',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    }}/>
+    <Box></Box>
+  </Grid>
+  <Grid
+    gap={0}
+    columns={[2, '1fr 1fr']}
+    sx={{
+      overflow: 'hidden'
+    }}>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+      sx={{ 
+        backgroundImage: 'url(/assets/poster1.jpg)',      
+        backgroundSize: 'auto 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    }}/>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+      sx={{ 
+        backgroundImage: 'url(/assets/tshirt.jpg)',      
+        backgroundSize: 'auto 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    }}/>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+      sx={{ 
+        backgroundImage: 'url(/assets/busstop.jpg)',      
+        backgroundSize: 'auto 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    }}/>
+    <Box p={3} display={'flex'} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']} bg='muted'><Heading fontSize={[ 3, 4, 5 ]} alignSelf={'flex-end'}> Examples </Heading></Box>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']} bg='secondary'></Box>
+    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+      sx={{ 
+        backgroundImage: 'url(/assets/poster2.jpg)',      
+        backgroundSize: 'auto 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    }}/>
+</Grid>
+
+    {/* <Tile p={3}
+      sx={{
+      minHeight: ['100vh', '100vh', 'calc(2/3*100vh)']}}>
+      <Heading fontSize={[ 4, 5, 6 ]}> About </Heading>
+    </Tile>
+    <Tile p={3}
+      sx={{
+      minHeight: ['100vh', '100vh', 'calc(2/3*100vh)']}}>
+      <Text fontSize={[ 1, 2, 3 ]}> trarara </Text>
+    </Tile>
     <Tile p={3}
       sx={{
         backgroundSize: 'auto 100%',
@@ -113,8 +186,8 @@ export default props =>
       minHeight: ['100vh', '100vh', 'calc(2/3*100vh)'], 
       gridRow:'2/3', gridColumn:'2/3'}}>
         CSS Grid
-    </Tile> 
-  </Box>
+    </Tile>  */}
+  {/* </Grid> */}
 
   {/* <Grid
     gap={0}

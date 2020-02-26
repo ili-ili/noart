@@ -13,7 +13,7 @@ export default props =>
         height: ['auto', 'auto', '100vh'],
         width: ['100vw', '100vw', 'auto']
     }}>
-    <Heading fontSize={[ 3, 4, 5 ]} 
+    <Heading fontSize={[ 2, 3, 4 ]} 
         p={2}
         sx={{
             writingMode: ['unset', 'unset', 'vertical-rl'], 

@@ -41,7 +41,7 @@ export default {
     background: '#FAFFFD',
     primary: '#1446A0',
     secondary: '#1AF2AD',
-    muted: 'red'//'#FBFFF7'
+    muted: '#FBFFF7'
   },
   styles: {
     root: {
