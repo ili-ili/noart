@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider, Grid } from 'theme-ui'
-import { Heading, Box, Text } from 'rebass'
+import { Heading, Box, Text, Flex } from 'rebass'
 import theme from './theme/base'
 import SideNav from './components/SideNav'
 import Footer from './components/Footer'
@@ -9,6 +9,7 @@ export default props =>
 <ThemeProvider theme={theme}>
   <SideNav/>
   <Box
+    pr={['7', '20vw', '30vw']}
     sx={{
       px: 4,
       py: 6,
@@ -17,25 +18,28 @@ export default props =>
       color: '#000F02',
       bg: '#FBFFF7',
       height: '100vh'
-    }}><Heading fontSize={[ 5, 6, 7 ]} alignSelf={'center'}> PUNCH goes heer </Heading></Box>
-  <Grid
+    }}><Heading widht={['90vw', '80vw', '60vw']} fontSize={[ 5, 6, 7 ]} alignSelf={'center'}> AI Art portaraits from RM </Heading></Box>
+  <Flex
     gap={0}
-    columns={[2, '1fr 1fr']}
+    flexWrap='wrap'
     sx={{
       overflow: 'hidden'
     }}>
     <Box p={3}
+      width={[ 1, 1, 1/2 ]}
       display={'flex'}
-      minHeight={['100vh', '100vh', 'calc(2/3*100vh)']}
+      minHeight={['30vh', '30vh', 'calc(2/3*100vh)']}
       width={[ '100vw', null, '30vw' ]}>
       <Heading fontSize={[ 4, 5, 6 ]} alignSelf={'center'}> About </Heading>
     </Box>
     <Box p={3}
-      minHeight={['100vh', '100vh', 'calc(2/3*100vh)']}
+      width={[ 1, 1, 1/2 ]}
+      minHeight={['30vh', '30vh', 'calc(2/3*100vh)']}
+      height={'auto'}
       width={[ '100vw', null, '30vw' ]}>
       <Text fontSize={[ 2, 3, 4 ]}> trarara </Text>
     </Box>
-  </Grid>
+  </Flex>
   <Box
     width={'100vw'}
     sx={{
@@ -47,58 +51,59 @@ export default props =>
       bg: '#FBFFF7',
       height: '100vh'
     }}><Heading fontSize={[ 5, 6, 7 ]} alignSelf={'center'}> Progress GIF here </Heading></Box>
-  <Grid
+  <Flex
     gap={0}
-    columns={[2, '2fr 1fr']}
+    flexWrap='wrap'
     sx={{
       overflow: 'hidden'
     }}>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+    <Box minHeight= {'100vh'}
+      width={[ 1, 1, 2/3 ]}
       sx={{ 
         backgroundImage: 'url(/assets/set.png)',      
-        backgroundSize: '100% auto',
+        backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}/>
     <Box></Box>
-  </Grid>
-  <Grid
+  </Flex>
+  <Flex
     gap={0}
-    columns={[2, '1fr 1fr']}
+    flexWrap='wrap'
     sx={{
       overflow: 'hidden'
     }}>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+    <Box width={[ 1, 1, 1/2 ]} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
       sx={{ 
         backgroundImage: 'url(/assets/poster1.jpg)',      
         backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}/>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+    <Box width={[ 1, 1, 1/2 ]} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
       sx={{ 
         backgroundImage: 'url(/assets/tshirt.jpg)',      
         backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}/>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+    <Box width={[ 1, 1, 1/2 ]} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
       sx={{ 
         backgroundImage: 'url(/assets/busstop.jpg)',      
         backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}/>
-    <Box p={3} display={'flex'} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']} bg='muted'><Heading fontSize={[ 3, 4, 5 ]} alignSelf={'flex-end'}> Examples </Heading></Box>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']} bg='secondary'></Box>
-    <Box minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
+    <Box width={[ 1, 1, 1/2 ]} p={3} display={'flex'} minHeight= {['30vh', '30vh', 'calc(2/3*100vh)']} bg='muted'><Heading fontSize={[ 4, 4, 5 ]} alignSelf={'flex-end'}> Explorations </Heading></Box>
+    <Box width={[ 1, 1, 1/2 ]} minHeight= {['30vh', '30vh', 'calc(2/3*100vh)']} bg='secondary'></Box>
+    <Box width={[ 1, 1, 1/2 ]} minHeight= {['100vh', '100vh', 'calc(2/3*100vh)']}
       sx={{ 
         backgroundImage: 'url(/assets/poster2.jpg)',      
         backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}/>
-</Grid>
+</Flex>
 
     {/* <Tile p={3}
       sx={{

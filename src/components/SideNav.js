@@ -4,8 +4,8 @@ import { Box, Heading } from 'rebass'
 export default props =>
 <Box
     px={2}
-    color='white'
-    bg='black'
+    color='#FBFFF7'
+    bg='#000F02'
     sx={{
         position: 'fixed',
         right: [0, null, null],
@@ -13,8 +13,9 @@ export default props =>
         height: ['auto', 'auto', '100vh'],
         width: ['100vw', '100vw', 'auto']
     }}>
-    <Heading fontSize={[ 2, 3, 4 ]} 
+    <Heading fontSize={[ 4, 5, 4 ]} 
         p={2}
+        mt={3}
         sx={{
             writingMode: ['unset', 'unset', 'vertical-rl'], 
             textOrientation: 'mixed',
